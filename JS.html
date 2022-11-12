@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            margin: auto;
+        }
+
+        table tr td button {
+            margin: 0px 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <table border="1" cellspacing="0">
+        <tr>
+            <th colspan="2">简易计算器</th>
+        </tr>
+        <tr>
+            <td>第一个数</td>
+            <td><input type="text" id="one"></td>
+        </tr>
+        <tr>
+            <td>第二个数</td>
+            <td><input type="text" id="two"></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button onclick="cal('+')">+</button>
+                <button onclick="cal('-')">-</button>
+                <button onclick="cal('*')">*</button>
+                <button onclick="cal('/')">/</button>
+            </td>
+        </tr>
+        <tr>
+            <td>计算结果</td>
+            <td><input type="text" id="resu"></td>
+        </tr>
+    </table>
+    <script>
+        function cal(sym) {
+            var one = document.getElementById("one").value
+            var two = document.getElementById("two").value
+            if (sym == '+') {
+                document.getElementById("resu").value = parseInt(one) + parseInt(two)
+            }
+        }
+    </script>
+</body>
+
+</html>
